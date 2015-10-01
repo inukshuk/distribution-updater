@@ -35,7 +35,7 @@ def server(environ, start_response):
     return iter([data])
 
 def update_styles(environ):
-    if environ["response_status"][0:3] != "200" || environ["build_status"] != 0:
+    if environ["response_status"][0:3] != "200" or environ["build_status"] != 0:
         return
 
     try:
